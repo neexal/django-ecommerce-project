@@ -1,0 +1,8 @@
+.sidebar{
+	background-color: #dfe4ea;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+.sidebar ul li{
+	list-style-type: none;
+}
