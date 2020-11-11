@@ -1,8 +1,20 @@
 .sidebar{
-	background-color: #dfe4ea;
+	height: 100%;
+	position: fixed;
+	top: 5;
+	left: 0;
+	background-color: #576574;
+	overflow-x: hidden;
 	text-align: center;
-	padding: 20px 0px 20px 0px;
+	padding: 20px 10px 20px 10px;
+	color: #fff;
 }
 .sidebar ul li{
 	list-style-type: none;
 }
+/*
+@media (max-width:1024px) { 
+  .sidebar-hide{
+  	display: none;
+  }
+}*/
