@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Product Detail {% endblock title %}   
+{% block body %}
+
+<div class="container-fluid">
+	<img src="main/images/product.png" alt="" class="img-fluid">
+	<p>{{product_details.title}}</p>
+	
+</div>
+
+
+{% endblock body %}

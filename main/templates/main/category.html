@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+	
+	<div class="container-fluid px-5">
+		<div class="row pt-4">
+		{% for category_item in category %}
+			<div class="col-lg-3 col-md-3 col-sm-6 pb-5">
+	            <div class="card text-center" style="width: 14rem;">
+	                <img class="card-img-top" src="{{category_item.category_image.url}}" alt="Card image cap" height="150px">
+	                <div class="card-body">
+	                    <h5 class="card-title"><a href="{% url 'category_items' id=category_item.id %}">{{category_item.category}}</a></h5>
+	                </div>
+	            </div>
+        	</div>
+
+        {% endfor %}
+        </div>
+	</div>
+
+{% endblock body %}
