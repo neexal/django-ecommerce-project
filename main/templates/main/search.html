@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %} {{category_name.category}} {% endblock title %}
+{% block title %} Home {% endblock title %}
 {% block body %}
 
 
@@ -22,6 +22,9 @@
                 </div>
             </div>
         </div>
+
+        {% empty %}
+            <h2>No Products Found</h2>
         {% endfor %}
 
 

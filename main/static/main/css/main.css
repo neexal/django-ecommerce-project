@@ -1,20 +1,12 @@
-.sidebar{
-	height: 100%;
-	position: fixed;
-	top: 5;
-	left: 0;
-	background-color: #576574;
-	overflow-x: hidden;
-	text-align: center;
-	padding: 20px 10px 20px 10px;
-	color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-.sidebar ul li{
-	list-style-type: none;
+
+.search{
+	width: 300px !important;
 }
-/*
-@media (max-width:1024px) { 
-  .sidebar-hide{
-  	display: none;
-  }
-}*/

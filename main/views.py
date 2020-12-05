@@ -25,11 +25,16 @@ def category(request):
 
 def category_items(request, id):
 	context = {
-		'category_items' : Category.objects.get(id=id).item_set.all()
+		'category_name' : Category.objects.get(pk = id),
+		'category_items' : Product.objects.filter(category=id)
 
 	}
 	return render(request, 'main/category_items.html', context)
 
-# class DetailView(generic.DetailView):
-#     model = Products
-#     template_name = 'main/category_items.html'
+def search(request):
+	query = request.GET['query']
+	context ={
+		# 'category_name' : Product.objects.all(),
+		'category_items' : Product.objects.filter(title__icontains=query)
+	}
+	return render(request, 'main/search.html', context)

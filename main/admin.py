@@ -4,7 +4,13 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
-	list_display = ('title', 'price','category',)
-
+	list_display = ('id','title', 'price','category',)
+	search_fields = ('title',)
+	list_display_links = ('id','title', )
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Category)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+	search_fields = ('category',)
+
+admin.site.register(Category, CategoryAdmin)
